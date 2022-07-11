@@ -1,0 +1,5 @@
+- Task0: O(1): haven't loop
+- Task1: O(n): have a loop
+- Task2: O(n): have a loop
+- Task3: O(nlogn): have sort 
+- Task4: O(nlogn): have sort
