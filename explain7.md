@@ -1,0 +1,1 @@
+implement same Trie. Only diference is save a handler for a node and instead of char it's part

@@ -1,0 +1,1 @@
+i using for loop then O(n)
