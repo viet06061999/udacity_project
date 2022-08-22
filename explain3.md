@@ -1,4 +1,5 @@
 in task3:
-number of command = sum(freq_input) + c = n + c
-c < 10
--> eficiency time is O(n)
+I use merge sort to sort and revert input_list then for each item in list then split each item to num1 and num2.
+=>  eficiency time is O(nlg(n)) (eficiency time of merge sort)
+ eficiency space is O(n)
+

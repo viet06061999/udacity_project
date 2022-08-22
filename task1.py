@@ -11,7 +11,7 @@ def Square(n, i, j):
     else:
         return Square(n, i, mid)
 def sqrt(number):
-    if number < 0:
+    if number is None or number < 0:
         return -1
     if number == 0:
         return 0
@@ -20,6 +20,8 @@ def sqrt(number):
     i = 1
     return Square(number, 0, number) 
   
+print ("Pass" if  (-1 == sqrt(None)) else "Fail")
+print ("Pass" if  (-1 == sqrt(-9)) else "Fail")
 print ("Pass" if  (3 == sqrt(9)) else "Fail")
 print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")

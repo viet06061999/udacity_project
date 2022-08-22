@@ -33,13 +33,14 @@ class RouteTrie:
         node = self.root
         if path == '/':
             return self.root.handler
-        list_path = path.split('/')
-        for part in list_path:
-            if part in node.children:
-                node = node.children[part]
-            else:
-                return None
-        return node.handler    
+        elif path is not None:    
+            list_path = path.split('/')
+            for part in list_path:
+                if part in node.children:
+                    node = node.children[part]
+                else:
+                    return None
+            return node.handler    
 
 # A RouteTrieNode will be similar to our autocomplete TrieNode... with one additional element, a handler.
 class Router:
@@ -58,6 +59,9 @@ router = Router("root handler") # remove the 'not found handler' if you did not 
 router.add_handler("/home/about", "about handler")  # add a route
 
 # some lookups with the expected output
+print(router.lookup(None)) # should print 'root handler'
+
+
 print(router.lookup("/")) # should print 'root handler'
 print(router.lookup("/home")) # should print 'not found handler' or None if you did not implement one
 print(router.lookup("/home/about")) # should print 'about handler'
